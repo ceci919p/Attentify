@@ -259,6 +259,7 @@ header {
 .number {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 .wave {
@@ -285,7 +286,6 @@ header {
 
   .big {
     font-size: 8rem;
-    margin: auto;
   }
 }
 
