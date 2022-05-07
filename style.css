@@ -20,7 +20,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 170px;
+  scroll-padding-top: 140px;
   font-size: 100%;
 }
 
@@ -226,10 +226,6 @@ small,
   justify-content: center;
 }
 
-.header_wrapper {
-  min-height: 80vh;
-}
-
 header {
   display: grid;
   grid-column: 2/3;
@@ -242,6 +238,7 @@ header {
 
 .illustration {
   max-height: 46vh;
+  margin: auto;
 }
 
 /*----------sections----------*/
@@ -468,6 +465,29 @@ footer {
   .deals {
     height: 60vh;
   }
+
+  .why,
+  .deals,
+  .family_text,
+  .school_text {
+    margin-block: 5rem;
+  }
+
+  /*   article > img {
+    max-height: 10vh;
+  } */
+
+  .school_text {
+    margin-block-start: 0;
+  }
+
+  .horizontal_wave {
+    margin-block: 5rem;
+  }
+
+  #school {
+    margin-block-end: 5rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -482,4 +502,19 @@ footer {
   header {
     height: 90vh;
   }
+}
+
+@media (min-width: 1366px) {
+  #intro,
+  .why,
+  .deals {
+    height: 50vh;
+  }
+
+  article > img {
+    max-height: 7vh;
+  }
+}
+
+@media (min-width: 1536px) {
 }
