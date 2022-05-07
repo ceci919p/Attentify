@@ -36,10 +36,6 @@ body {
   font-family: var(--font);
 }
 
-/* main {
-  padding: 1rem;
-} */
-
 .text,
 .header_text,
 .family_text,
@@ -64,17 +60,6 @@ a:hover {
   margin-block-end: 5rem;
 }
 
-/* main {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1000px) auto;
-}
- */
-/* img {
-  object-fit: cover;
-  max-width: 100%;
-  display: block;
-} */
-
 /*----------typography----------*/
 
 p {
@@ -95,7 +80,7 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 3.052rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -122,7 +107,7 @@ small,
 }
 
 .big {
-  font-size: 9rem;
+  font-size: 7rem;
   font-weight: var(--font-weight-headline);
   text-align: center;
   margin: 0;
@@ -538,11 +523,6 @@ footer {
 }
 
 @media (min-width: 1366px) {
-  /*   #intro,
-  .why,
-  .deals {
-    height: 50vh;
-  } */
 }
 
 @media (min-width: 1536px) {
