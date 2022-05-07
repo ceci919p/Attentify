@@ -41,8 +41,14 @@ body {
 } */
 
 .text {
-  text-align: center;
+  /* text-align: center; */
   margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-darker);
+  text-align: center;
 }
 
 /* main {
@@ -242,14 +248,15 @@ header {
   max-height: 50vh;
 }
 
-/*----------intro section----------*/
+/*----------sections----------*/
 
 .blue {
   background-color: var(--color-dark);
 }
 
 .intro,
-.why {
+.why,
+.deals {
   grid-column: 2/3;
 
   padding-inline: 1rem;
@@ -269,7 +276,8 @@ header {
 
 /*----------why section----------*/
 
-.why {
+.why,
+.deals {
   margin: auto;
   margin-block: 5rem;
 }
@@ -278,11 +286,24 @@ ul > li {
   margin-bottom: 1rem;
 }
 
+/*----------deals section----------*/
+
+.grey {
+  background-color: var(--color-light);
+}
+
+.deals {
+  text-align: center;
+}
+
+/*----------family section----------*/
+
 /*----------media querys----------*/
 
 @media (min-width: 810px) {
   header,
-  .intro {
+  .intro,
+  .packages {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-inline: 2rem;
@@ -299,6 +320,10 @@ ul > li {
 
   .big {
     font-size: 8rem;
+  }
+
+  .packages {
+    gap: 5rem;
   }
 }
 
