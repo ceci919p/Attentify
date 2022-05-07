@@ -5,6 +5,22 @@ window.addEventListener("DOMContentLoaded", start);
 function start() {
   revealIntro();
   textAnimation();
+  revealHeader();
+}
+
+function revealHeader() {
+  gsap.to(".illustration", {
+    opacity: 1,
+    duration: 1.5,
+    ease: "power2.out",
+  });
+
+  gsap.to(".header_text", {
+    x: "0%",
+    opacity: 1,
+    duration: 1.5,
+    ease: "power2.out",
+  });
 }
 
 function revealIntro() {

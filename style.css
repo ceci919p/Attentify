@@ -41,6 +41,7 @@ body {
 } */
 
 .text,
+.header_text,
 .family_text,
 .school_text {
   /* text-align: center; */
@@ -250,9 +251,15 @@ header {
   margin-block-end: 3rem;
 }
 
+.header_text {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
 .illustration {
   max-height: 46vh;
   margin: auto;
+  opacity: 0;
 }
 
 /*----------sections----------*/
