@@ -18,7 +18,10 @@
     <nav class="navbar">
       <ul class="nav_menu">
         <li class="nav_item">
-          <a href="#intro" class="nav_link">Hvem tilbyder vi?</a>
+          <a href="#intro" class="nav_link">Hvad vi kan tilbyde</a>
+        </li>
+        <li class="nav_item">
+          <a href="#why" class="nav_link">Værdien ved at vide</a>
         </li>
         <li class="nav_item">
           <a href="#family" class="nav_link">For familier</a>
@@ -60,7 +63,7 @@
 
       <div class="blue section_wrapper">
         <section id="intro">
-          <div class="text">
+          <div class="text left">
             <h2>Vi kan give svaret</h2>
             <p>
               Attentify tilbyder løsninger til både familier og skoler der
@@ -72,15 +75,15 @@
             </p>
           </div>
 
-          <div class="number">
-            <p class="big">92%</p>
+          <div class="number_container right">
+            <p id="number" class="big">92%</p>
             <img class="wave" src="assets/wave1.svg" alt="bølge" />
           </div>
         </section>
       </div>
 
       <div class="section_wrapper">
-        <section class="why">
+        <section id="why">
           <h2>Værdien ved at vide</h2>
           <ul>
             <li>Forstå barnet bedre</li>
@@ -92,7 +95,7 @@
       </div>
 
       <div class="grey section_wrapper">
-        <section class="deals">
+        <section id="deals">
           <h2>Vælg en pakkeløsning</h2>
 
           <div class="packages">
@@ -201,4 +204,6 @@
   </body>
   <script src="scripts/script.js"></script>
   <script src="scripts/burgermenu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </html>

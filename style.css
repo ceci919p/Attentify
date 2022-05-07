@@ -121,7 +121,7 @@ small,
 }
 
 .big {
-  font-size: 10rem;
+  font-size: 9rem;
   font-weight: var(--font-weight-headline);
   text-align: center;
   margin: 0;
@@ -169,7 +169,21 @@ small,
   font-size: 1.2rem;
   text-decoration: none;
   color: var(--color-lighter);
-  transition: 0.7s ease;
+
+  background-image: linear-gradient(var(--color-accent2), var(--color-accent2));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 0.05em;
+  transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-property: all;
+  transition-property: background-size, color;
+  padding-bottom: 0.2em;
+}
+
+.nav_link:hover {
+  /*hover animation*/
+  background-image: linear-gradient(var(--color-accent2), var(--color-accent2));
+  background-size: 100% 0.05em;
 }
 
 .nav_menu.active {
@@ -231,9 +245,9 @@ header {
   grid-column: 2/3;
   justify-items: center;
   gap: 1rem;
-  padding-inline: 2rem;
-  /* margin-block-start: 5rem;
-  margin-block-end: 3rem; */
+  padding: 2rem;
+  /* margin-block-start: 5rem;*/
+  margin-block-end: 3rem;
 }
 
 .illustration {
@@ -248,8 +262,8 @@ header {
 }
 
 #intro,
-.why,
-.deals,
+#why,
+#deals,
 #family,
 #school {
   grid-column: 2/3;
@@ -259,7 +273,7 @@ header {
   margin-block: 5rem;
 }
 
-.number {
+.number_container {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -269,10 +283,28 @@ header {
   margin: auto;
 }
 
+.counts {
+  margin-top: 100vh;
+}
+
+.right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.left {
+  transform: translate(-100%);
+  opacity: 0;
+}
+
 /*----------why section----------*/
 
-.why,
-.deals,
+#why {
+  opacity: 0;
+}
+
+#why,
+#deals,
 .family_text,
 .school_text {
   margin: auto;
@@ -288,8 +320,8 @@ ul > li {
   margin-bottom: 1rem;
 }
 
-.why,
-.deals {
+#why,
+#deals {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -302,7 +334,7 @@ ul > li {
   background-color: var(--color-light);
 }
 
-.deals,
+#deals,
 .horizontal_wave {
   text-align: center;
 }
@@ -316,6 +348,7 @@ ul > li {
 .family_text,
 .school_text {
   max-width: 50ch;
+  opacity: 0;
 }
 
 article {
@@ -324,7 +357,7 @@ article {
 }
 
 article > img {
-  max-height: 12vh;
+  max-height: 10vh;
 }
 
 .cta_button {
@@ -393,11 +426,8 @@ footer {
     padding-inline: 2rem;
   }
 
-  .header_wrapper {
-    min-height: 60vh;
-  }
-
   header {
+    min-height: 60vh;
     gap: 2.5rem;
   }
 
@@ -406,7 +436,7 @@ footer {
   }
 
   #intro,
-  .why {
+  #why {
     height: 40vh;
   }
 
@@ -418,8 +448,8 @@ footer {
     max-height: 7vh;
   }
 
-  .why,
-  .deals,
+  #why,
+  #deals,
   .family_text,
   .school_text {
     margin-block-end: 2rem;
@@ -439,8 +469,8 @@ footer {
   }
 
   #intro,
-  .why,
-  .deals,
+  #why,
+  #deals,
   #family,
   #school {
     margin-block: 3rem;
@@ -452,30 +482,30 @@ footer {
     max-height: 70vh;
   }
 
-  .header_wrapper {
-    min-height: 80vh;
-  }
-
   header {
     gap: 1.5rem;
+    min-height: 90vh;
+  }
+
+  .header_wrapper {
+    margin-block-end: 5rem;
   }
 
   #intro,
-  .why,
-  .deals {
+  #deals {
+    height: 70vh;
+  }
+
+  #why {
     height: 60vh;
   }
 
-  .why,
-  .deals,
+  #why,
+  #deals,
   .family_text,
   .school_text {
     margin-block: 5rem;
   }
-
-  /*   article > img {
-    max-height: 10vh;
-  } */
 
   .school_text {
     margin-block-start: 0;
@@ -498,22 +528,14 @@ footer {
   h1 {
     font-size: 4.052rem;
   }
-
-  header {
-    height: 90vh;
-  }
 }
 
 @media (min-width: 1366px) {
-  #intro,
+  /*   #intro,
   .why,
   .deals {
     height: 50vh;
-  }
-
-  article > img {
-    max-height: 7vh;
-  }
+  } */
 }
 
 @media (min-width: 1536px) {
