@@ -1,9 +1,12 @@
 :root {
   /*----------color variables----------*/
 
-  --color-dark: #292a2c;
+  --color-darker: #292a2c;
+  --color-dark: #96aeed;
+
   --color-light: #f2f2f2;
   --color-lighter: #fff;
+
   --color-accent1: #f40575;
   --color-accent2: #6287e5;
 
@@ -33,8 +36,13 @@ body {
   font-family: var(--font);
 }
 
-main {
+/* main {
   padding: 1rem;
+} */
+
+.text {
+  text-align: center;
+  margin: auto;
 }
 
 /* main {
@@ -73,6 +81,7 @@ h1 {
 
 h2 {
   font-size: 2.441rem;
+  margin-top: 0;
 }
 
 h3 {
@@ -90,6 +99,13 @@ h5 {
 small,
 .text_small {
   font-size: 0.8rem;
+}
+
+.big {
+  font-size: 10rem;
+  font-weight: var(--font-weight-headline);
+  text-align: center;
+  margin: 0;
 }
 
 /*----------navigation----------*/
@@ -119,7 +135,7 @@ small,
   text-align: center;
   padding-inline: 1rem;
   padding-block: 3rem;
-  background-color: var(--color-dark);
+  background-color: var(--color-darker);
   opacity: 0;
   left: -100%;
   transition: 0.3s;
@@ -177,7 +193,7 @@ small,
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
   border-radius: 25px;
-  background-color: var(--color-dark);
+  background-color: var(--color-darker);
 }
 
 @media (min-width: 810px) {
@@ -199,9 +215,17 @@ small,
 
 /*----------header----------*/
 
-.header_wrapper {
+.header_wrapper,
+.section_wrapper {
   display: grid;
   grid-template-columns: auto minmax(0, 1000px) auto;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.header_wrapper {
+  min-height: 80vh;
 }
 
 header {
@@ -209,26 +233,59 @@ header {
   grid-column: 2/3;
   justify-items: center;
   gap: 1rem;
+  padding-inline: 1rem;
+  /* margin-block-start: 5rem;
+  margin-block-end: 3rem; */
 }
 
 .illustration {
   max-height: 50vh;
 }
 
-.text {
-  text-align: center;
+/*----------intro section----------*/
+
+.section_wrapper {
+  background-color: var(--color-dark);
+}
+
+.intro {
+  grid-column: 2/3;
+
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  margin-block: 5rem;
+}
+
+.number {
+  display: flex;
+  flex-direction: column;
+}
+
+.wave {
   margin: auto;
 }
 
+/*----------media querys----------*/
+
 @media (min-width: 810px) {
-  header {
+  header,
+  .intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-inline: 1rem;
+    padding-inline: 2rem;
   }
 
   .illustration {
     max-height: 40vh;
+  }
+
+  .intro {
+    height: 40vh;
+  }
+
+  .big {
+    font-size: 8rem;
+    margin: auto;
   }
 }
 
