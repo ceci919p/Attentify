@@ -40,15 +40,22 @@ body {
   padding: 1rem;
 } */
 
-.text {
+.text,
+.family_text,
+.school_text {
   /* text-align: center; */
   margin: auto;
+  max-width: 50ch;
 }
 
 a {
   text-decoration: none;
   color: var(--color-darker);
   text-align: center;
+}
+
+.space {
+  margin-block-end: 5rem;
 }
 
 /* main {
@@ -95,7 +102,8 @@ h3 {
 }
 
 h4 {
-  font-size: 1.563rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 h5 {
@@ -211,7 +219,7 @@ small,
   }
 
   .nav_menu {
-    top: 100px;
+    top: 88px;
     margin: 0;
     height: 100%;
     justify-content: center;
@@ -256,7 +264,9 @@ header {
 
 .intro,
 .why,
-.deals {
+.deals,
+#family,
+#school {
   grid-column: 2/3;
 
   padding-inline: 1rem;
@@ -277,9 +287,16 @@ header {
 /*----------why section----------*/
 
 .why,
-.deals {
+.deals,
+.family_text,
+.school_text {
   margin: auto;
-  margin-block: 5rem;
+  margin-block-start: 5rem;
+  margin-block-end: 4rem;
+}
+
+.school_text {
+  margin-block-start: 0;
 }
 
 ul > li {
@@ -292,11 +309,69 @@ ul > li {
   background-color: var(--color-light);
 }
 
-.deals {
+.deals,
+.horizontal_wave {
   text-align: center;
 }
 
-/*----------family section----------*/
+.horizontal_wave {
+  margin-block: 1.5rem;
+}
+
+/*----------family + school section----------*/
+
+.family_text,
+.school_text {
+  max-width: 50ch;
+}
+
+article {
+  text-align: center;
+  margin-block: 5rem;
+}
+
+article > img {
+  max-height: 12vh;
+}
+
+.cta_button {
+  margin: 0;
+}
+
+.family_button {
+  background-color: var(--color-accent1);
+}
+
+.school_button {
+  background-color: var(--color-accent2);
+}
+
+.family_button:hover,
+.school_button:hover {
+  background-color: var(--color-darker);
+}
+
+.button_wrapper {
+  text-align: center;
+}
+
+button {
+  border: none;
+  padding: 0.7rem 3rem;
+  color: var(--color-lighter);
+  font-family: var(--font);
+  font-weight: var(--font-weight-headline);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/*----------footer----------*/
+footer {
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+  padding: 2rem;
+  text-align: center;
+}
 
 /*----------media querys----------*/
 
@@ -324,6 +399,15 @@ ul > li {
 
   .packages {
     gap: 5rem;
+  }
+
+  article > img {
+    max-height: 10vh;
+  }
+
+  .ikon_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
