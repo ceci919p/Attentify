@@ -218,7 +218,7 @@ small,
 .header_wrapper,
 .section_wrapper {
   display: grid;
-  grid-template-columns: auto minmax(0, 1000px) auto;
+  grid-template-columns: auto minmax(0, 1200px) auto;
 
   align-items: center;
   justify-content: center;
@@ -244,11 +244,12 @@ header {
 
 /*----------intro section----------*/
 
-.section_wrapper {
+.blue {
   background-color: var(--color-dark);
 }
 
-.intro {
+.intro,
+.why {
   grid-column: 2/3;
 
   padding-inline: 1rem;
@@ -266,6 +267,17 @@ header {
   margin: auto;
 }
 
+/*----------why section----------*/
+
+.why {
+  margin: auto;
+  margin-block: 5rem;
+}
+
+ul > li {
+  margin-bottom: 1rem;
+}
+
 /*----------media querys----------*/
 
 @media (min-width: 810px) {
@@ -280,7 +292,8 @@ header {
     max-height: 40vh;
   }
 
-  .intro {
+  .intro,
+  .why {
     height: 40vh;
   }
 
@@ -291,6 +304,16 @@ header {
 
 @media (min-width: 1000px) {
   .illustration {
-    max-height: 60vh;
+    max-height: 70vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4.052rem;
+  }
+
+  header {
+    height: 90vh;
   }
 }
