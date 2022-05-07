@@ -20,7 +20,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 170px;
   font-size: 100%;
 }
 
@@ -52,6 +52,11 @@ a {
   text-decoration: none;
   color: var(--color-darker);
   text-align: center;
+  transition: 0.5s ease-out;
+}
+
+a:hover {
+  transform: scale(1.05);
 }
 
 .space {
@@ -210,23 +215,6 @@ small,
   background-color: var(--color-darker);
 }
 
-@media (min-width: 810px) {
-  .navbar {
-    left: 0;
-    top: 0;
-    height: 100%;
-    overflow: auto;
-  }
-
-  .nav_menu {
-    top: 88px;
-    margin: 0;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 /*----------header----------*/
 
 .header_wrapper,
@@ -247,13 +235,13 @@ header {
   grid-column: 2/3;
   justify-items: center;
   gap: 1rem;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   /* margin-block-start: 5rem;
   margin-block-end: 3rem; */
 }
 
 .illustration {
-  max-height: 50vh;
+  max-height: 46vh;
 }
 
 /*----------sections----------*/
@@ -262,14 +250,14 @@ header {
   background-color: var(--color-dark);
 }
 
-.intro,
+#intro,
 .why,
 .deals,
 #family,
 #school {
   grid-column: 2/3;
 
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   padding-block: 1rem;
   margin-block: 5rem;
 }
@@ -301,6 +289,14 @@ header {
 
 ul > li {
   margin-bottom: 1rem;
+}
+
+.why,
+.deals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*----------deals section----------*/
@@ -349,6 +345,7 @@ article > img {
 .family_button:hover,
 .school_button:hover {
   background-color: var(--color-darker);
+  transition: 0.5s ease-in-out;
 }
 
 .button_wrapper {
@@ -376,19 +373,42 @@ footer {
 /*----------media querys----------*/
 
 @media (min-width: 810px) {
+  .navbar {
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .nav_menu {
+    top: 88px;
+    margin: 0;
+
+    justify-content: center;
+    align-items: center;
+  }
+
   header,
-  .intro,
+  #intro,
   .packages {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-inline: 2rem;
   }
 
+  .header_wrapper {
+    min-height: 60vh;
+  }
+
+  header {
+    gap: 2.5rem;
+  }
+
   .illustration {
     max-height: 40vh;
   }
 
-  .intro,
+  #intro,
   .why {
     height: 40vh;
   }
@@ -397,17 +417,36 @@ footer {
     font-size: 8rem;
   }
 
-  .packages {
-    gap: 5rem;
+  article > img {
+    max-height: 7vh;
   }
 
-  article > img {
-    max-height: 10vh;
+  .why,
+  .deals,
+  .family_text,
+  .school_text {
+    margin-block-end: 2rem;
+  }
+
+  .packages {
+    gap: 5rem;
   }
 
   .ikon_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  article {
+    margin-block: 3rem;
+  }
+
+  #intro,
+  .why,
+  .deals,
+  #family,
+  #school {
+    margin-block: 3rem;
   }
 }
 
@@ -415,9 +454,27 @@ footer {
   .illustration {
     max-height: 70vh;
   }
+
+  .header_wrapper {
+    min-height: 80vh;
+  }
+
+  header {
+    gap: 1.5rem;
+  }
+
+  #intro,
+  .why,
+  .deals {
+    height: 60vh;
+  }
 }
 
 @media (min-width: 1200px) {
+  .nav_menu {
+    height: 100%;
+  }
+
   h1 {
     font-size: 4.052rem;
   }
