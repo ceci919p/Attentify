@@ -308,6 +308,11 @@ header {
   margin-block-start: 0;
 }
 
+.school_text > h3,
+.family_text > h3 {
+  margin-top: 0;
+}
+
 ul > li {
   margin-bottom: 1rem;
 }
